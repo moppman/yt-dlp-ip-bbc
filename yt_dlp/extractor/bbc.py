@@ -52,13 +52,13 @@ class BBCCoUkIE(InfoExtractor):
     _LOGIN_URL = 'https://account.bbc.com/signin'
     _NETRC_MACHINE = 'bbc'
 
-    _MEDIA_SELECTOR_URL_TEMPL = 'https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/%s/vpid/%s'
+    _MEDIA_SELECTOR_URL_TEMPL = 'https://securegate.iplayer.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/%s/vpid/%s'
     _MEDIA_SETS = [
         # Provides HQ HLS streams with even better quality that pc mediaset but fails
         # with geolocation in some cases when it's even not geo restricted at all (e.g.
         # http://www.bbc.co.uk/programmes/b06bp7lf). Also may fail with selectionunavailable.
         'iptv-all',
-        'pc',
+        'iptv-uhd',
     ]
 
     _EMP_PLAYLIST_NS = 'http://bbc.co.uk/2008/emp/playlist'
